@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84051C22-B570-4222-922D-5DD1C54E75C8}</ProjectGuid>
+    <ProjectGuid>{C04B0F9D-D8E4-425B-A3E7-4F9649E53127}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DandS.RequestReply</RootNamespace>
-    <AssemblyName>DandS.RequestReply</AssemblyName>
+    <RootNamespace>DandS.RequestReply.Contracts</RootNamespace>
+    <AssemblyName>DandS.RequestReply.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,18 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OpStatusItem.cs" />
-    <Compile Include="Reply.cs" />
-    <Compile Include="Request.cs" />
+    <Compile Include="IOpStatusItem.cs" />
+    <Compile Include="IReply.cs" />
+    <Compile Include="IRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RequestReply.Contracts\RequestReply.Contracts.csproj">
-      <Project>{c04b0f9d-d8e4-425b-a3e7-4f9649e53127}</Project>
-      <Name>RequestReply.Contracts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

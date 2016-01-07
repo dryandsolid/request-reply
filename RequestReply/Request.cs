@@ -1,6 +1,6 @@
 ﻿using DandS.RequestReply.Contracts;
 
-namespace DandS.RequestReply.Concretes
+namespace DandS.RequestReply
 {
 	public class Request<R> : IRequest<R>
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using DandS.RequestReply.Contracts;
 
-namespace DandS.RequestReply.Concretes
+namespace DandS.RequestReply
 {
 	public class Reply<R> : IReply<R>
 	{
