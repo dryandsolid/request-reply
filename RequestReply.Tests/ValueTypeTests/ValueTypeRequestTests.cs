@@ -72,15 +72,15 @@ namespace RequestReply.Tests.ValueTypeTests
 			rply.ReplyData	= rplyData;
 			for (int i = 0; i < nbrOfInfoItems; i++)
 			{
-				rply.AddIinfoItem(new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
+				rply.AddOpStatusItem(rply.InfoItems, new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
 			}
 			for (int i = 0; i < nbrOfWarnings; i++)
 			{
-				rply.AddWarningItem(new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
+				rply.AddOpStatusItem(rply.Warnings, new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
 			}
 			for (int i = 0; i < nbrOfErrors; i++)
 			{
-				rply.AddErrorItem(new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
+				rply.AddOpStatusItem(rply.Errors, new OpStatusItem("property:" +  i.ToString(), "property:" +  i.ToString(), "code:" + i.ToString(), "msg: " + i.ToString(), false));
 			}
 			return rply;
 		}

@@ -47,17 +47,14 @@ namespace DandS.RequestReply
 			this.ReplyData = replyData;
 		}
 
-		public void AddIinfoItem(IOpStatusItem item)
+		public void AddOpStatusItem(List<IOpStatusItem> list, IOpStatusItem item)
 		{
-			InfoItems.Add(item);
+			list.Add(item);
 		}
 
-		public void AddWarningItem(IOpStatusItem item) {
-			Warnings.Add(item);
-		}
-
-		public void AddErrorItem(IOpStatusItem item) {
-			Errors.Add(item);
+		public void AddOpStatusItems(List<IOpStatusItem> list, List<IOpStatusItem> items)
+		{
+			list.AddRange(items);
 		}
 
 		private void InitLists()

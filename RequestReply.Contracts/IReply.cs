@@ -16,8 +16,8 @@ namespace DandS.RequestReply.Contracts
 		List<IOpStatusItem> Errors { get; }
 		R ReplyData { get; set; }
 
-		void AddIinfoItem(IOpStatusItem item);
-		void AddWarningItem(IOpStatusItem item);
-		void AddErrorItem(IOpStatusItem item);
+		void AddOpStatusItem(List<IOpStatusItem> list, IOpStatusItem item);
+		void AddOpStatusItems(List<IOpStatusItem> list, List<IOpStatusItem> items);
+
 	}
 }
