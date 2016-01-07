@@ -43,6 +43,7 @@
     <Compile Include="IOpStatusItem.cs" />
     <Compile Include="IReply.cs" />
     <Compile Include="IRequest.cs" />
+    <Compile Include="ITraceable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

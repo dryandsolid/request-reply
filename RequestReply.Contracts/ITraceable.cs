@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DandS.RequestReply.Contracts
 {
-	public interface IRequest<R> : ITraceable
+	public interface ITraceable
 	{
-		R RequestData { get; set; }
+		string SessionChainId { get; }
+		string RequestChainId { get; }
 	}
 }

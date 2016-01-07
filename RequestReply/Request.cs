@@ -2,7 +2,7 @@
 
 namespace DandS.RequestReply
 {
-	public class Request<R> : IRequest<R>
+	public class Request<R> : IRequest<R>, ITraceable
 	{
 		public string SessionChainId { get; private set; }
 		public string RequestChainId { get; private set; }

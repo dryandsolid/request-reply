@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace DandS.RequestReply.Contracts
 {
-	public interface IReply<R>
+	public interface IReply<R> : ITraceable
 	{
 		bool IsSuccessful { get; }
 		bool HasWarnings { get; }
 		bool HasInfoItems { get; }
-		string SessionChainId { get; }
-		string RequestChainId { get; }
 		List<IOpStatusItem> InfoItems { get; }
 		List<IOpStatusItem> Warnings { get; }
 		List<IOpStatusItem> Errors { get; }

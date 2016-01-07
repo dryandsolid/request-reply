@@ -3,7 +3,7 @@ using DandS.RequestReply.Contracts;
 
 namespace DandS.RequestReply
 {
-	public class Reply<R> : IReply<R>
+	public class Reply<R> : IReply<R>, ITraceable
 	{
 		public virtual bool IsSuccessful
 		{
@@ -16,7 +16,7 @@ namespace DandS.RequestReply
 		{
 			get
 			{
-				return Warnings.Count == 0;
+				return Warnings.Count > 0;
 			}
 		}
 
@@ -24,7 +24,7 @@ namespace DandS.RequestReply
 		{
 			get
 			{
-				return InfoItems.Count == 0;
+				return InfoItems.Count > 0;
 			}
 		}
 
@@ -44,14 +44,21 @@ namespace DandS.RequestReply
 		public Reply(R replyData)
 		{
 			InitLists();
-			this.ReplyData	= replyData;
+			this.ReplyData = replyData;
 		}
 
-		public void AddIinfoItem(IOpStatusItem item) { }
+		public void AddIinfoItem(IOpStatusItem item)
+		{
+			InfoItems.Add(item);
+		}
 
-		public void AddWarningItem(IOpStatusItem item) { }
+		public void AddWarningItem(IOpStatusItem item) {
+			Warnings.Add(item);
+		}
 
-		public void AddErrorItem(IOpStatusItem item) { }
+		public void AddErrorItem(IOpStatusItem item) {
+			Errors.Add(item);
+		}
 
 		private void InitLists()
 		{
